@@ -14,7 +14,7 @@ Person::~Person(){
   //delete
 }
 
-string Person::getID(){
+int Person::getID(){
   return id;
 }
 

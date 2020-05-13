@@ -8,26 +8,26 @@ Student::~Student(){
   //delete
 }
 
-string getMajor(){
+string Student::getMajor(){
   return major;
 }
 
-double getGPA(){
+double Student::getGPA(){
   return gpa;
 }
 
-LinkedList* getFaculty(){
+int Student::getFaculty(){
   return faculty;
 }
 
-void setMajor(string major){
+void Student::setMajor(string major){
   this->major = major;
 }
 
-void setGPA(double gpa){
+void Student::setGPA(double gpa){
   this->gpa = gpa;
 }
 
-void setFaculty(LinkedList* faculty){
+void Student::setFaculty(int faculty){
   this->faculty = faculty;
 }

@@ -1,8 +1,15 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+#include "Faculty.h"
+#include "Person.h"
+
+using namespace std;
+
 class Student : public Person{
 public:
   typedef Person super;
   Student();
-  Student(int id, string name, string level, string major, double gpa, int faculty):super(int id, string name, string level){
+  Student(int id, string name, string level, string major, double gpa, int faculty):super(id, name, level){
     this->major = major;
     this->gpa = gpa;
     this->faculty = faculty;
@@ -10,13 +17,14 @@ public:
   ~Student();
   string getMajor();
   double getGPA();
-  LinkedList* getFaculty();
+  int getFaculty();
   void setMajor(string major);
   void setGPA(double gpa);
-  void setFaculty(LinkedList* faculty);
-
+  void setFaculty(int faculty);
 private:
   string major;
   double gpa;
-  LinkedList* faculty; //replace with list
+  int faculty;
 };
+
+#endif

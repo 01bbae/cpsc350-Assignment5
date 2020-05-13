@@ -1,3 +1,5 @@
+#ifndef BST_H
+#define BST_H
 #include <iostream>
 #include "TreeNode.h"
 
@@ -40,7 +42,7 @@ void BST<T>::insert(int k, T val){
     TreeNode<T>* parent = root;
     while(true){
       parent = curr;
-      if(val < curr->key){
+      if(k < curr->key){
         curr=curr->left;
         if(curr == NULL){
           parent->left = node;
@@ -197,3 +199,5 @@ void BST<T>::printTree(TreeNode<T> *node){
     printTree(node->right);
   }
 }
+
+#endif
